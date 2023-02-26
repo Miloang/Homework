@@ -19,14 +19,12 @@ public class Trigger : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (tag ==" Player")
+    { 
         Debug.Log(other.gameObject.name + "Trigger ENTER");
     }
 
      private void OnTriggerStay2D(Collider2D other)
     {
-        if (tag ==" Player")
         Debug.Log(other.gameObject.name + "Trigger STAY");
     }
 }
