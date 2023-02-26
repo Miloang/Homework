@@ -46,18 +46,20 @@ public class EnemyController : MonoBehaviour
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); 
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (tag ==" Enemy")
-        Debug.Log(other.gameObject.name + "ENTER");
+        Debug.Log(collision.gameObject.name + "ENTER");
     }
 
-     private void OnCollisionStay2D(Collision2D other)
+     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (tag ==" Enemy")
-        Debug.Log(other.gameObject.name + "STAY");
+        Debug.Log(collision.gameObject.name + "STAY");
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.name + "ENTER");
+    }
 
 
 }
